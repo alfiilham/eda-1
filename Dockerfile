@@ -12,4 +12,5 @@ ENV JAVA_HOME /usr/lib/jvm/jre-17-openjdk
 RUN pip install aiohttp elasticsearch python-dateutil pyyaml
 RUN ansible-galaxy collection install ansible.eda cloin.eda
 
-CMD ping 8.8.8.8
+CMD ["ping 8.8.8.8"]
+
