@@ -12,6 +12,5 @@ ENV JAVA_HOME /usr/lib/jvm/jre-17-openjdk
 RUN pip install aiohttp elasticsearch python-dateutil pyyaml
 RUN ansible-galaxy collection install ansible.eda cloin.eda
 
-RUN dnf install iputils -y
-CMD ["ping", "8.8.8.8"]
+COPY . /root/.ansible/collections/ansible_collections/cloin/eda/extensions/eda/plugins/event_source -y
 
